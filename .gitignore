@@ -1,0 +1,10 @@
+# Môi trường
+.env
+
+# Phụ thuộc
+node_modules/
+
+# Log
+npm-debug.log
+yarn-debug.log
+yarn-error.log
