@@ -1,0 +1,214 @@
+
+{
+  "questions": [
+    {
+      "category": "TOEIC", "part": 5, "format": "MULTIPLE_CHOICE", "metadata": { "level": "Easy" },
+      "subQuestions": [{ "content": "Mr. Kim is a _______ respected member of the community.", "options": ["high", "highly", "higher", "height"], "correctAnswer": ["highly"], "explanation": "Trạng từ 'highly' bổ nghĩa cho động từ 'respected'." }]
+    },
+    {
+      "category": "TOEIC", "part": 5, "format": "MULTIPLE_CHOICE", "metadata": { "level": "Easy" },
+      "subQuestions": [{ "content": "Please complete the form and return it at your _______ convenience.", "options": ["early", "earliest", "earlier", "earliness"], "correctAnswer": ["earliest"], "explanation": "Cấu trúc 'at your earliest convenience' là một cụm từ cố định." }]
+    },
+    {
+      "category": "TOEIC", "part": 5, "format": "MULTIPLE_CHOICE", "metadata": { "level": "Medium" },
+      "subQuestions": [{ "content": "The new software is _______ with all our current operating systems.", "options": ["compatible", "competing", "completed", "complacent"], "correctAnswer": ["compatible"] }]
+    },
+    {
+      "category": "ACADEMIC", "part": 1, "format": "FILL_IN", "metadata": { "level": "Medium" },
+      "subQuestions": [{ "content": "She is known for her _______ to detail.", "correctAnswer": ["attention"] }]
+    },
+    {
+      "category": "TOEIC", "part": 7, "format": "MULTIPLE_CHOICE", "metadata": { "level": "Hard" },
+      "resource": { "passages": ["Memo: To all staff. The annual company picnic will be held on Saturday, June 20th at Green Park. Families are welcome. Please RSVP by June 10th so we can finalize the catering."] },
+      "subQuestions": [
+        { "content": "What is the purpose of this memo?", "options": ["To announce a new product", "To invite staff to a picnic", "To discuss a new policy", "To request a report"], "correctAnswer": ["To invite staff to a picnic"] },
+        { "content": "When must staff RSVP?", "options": ["June 20th", "June 21st", "June 10th", "June 1st"], "correctAnswer": ["June 10th"] }
+      ]
+    },
+    {
+      "category": "TOEIC", "part": 5, "format": "MULTIPLE_CHOICE", "metadata": { "level": "Easy" },
+      "subQuestions": [{ "content": "All employees must wear their identification badges _______ all times.", "options": ["at", "on", "in", "by"], "correctAnswer": ["at"] }]
+    },
+    {
+      "category": "TOEIC", "part": 5, "format": "MULTIPLE_CHOICE", "metadata": { "level": "Medium" },
+      "subQuestions": [{ "content": "The company decided to _______ its marketing budget by 15%.", "options": ["increase", "increased", "increasing", "increases"], "correctAnswer": ["increase"] }]
+    },
+    {
+      "category": "GRAMMAR", "part": 2, "format": "TRANSFORM", "metadata": { "level": "Medium" },
+      "subQuestions": [{ "content": "He started working here three years ago.", "subText": "He has been...", "correctAnswer": ["working here for three years"] }]
+    },
+    {
+      "category": "TOEIC", "part": 5, "format": "MULTIPLE_CHOICE", "metadata": { "level": "Hard" },
+      "subQuestions": [{ "content": "The CEO's speech had a _______ effect on the employees' morale.", "options": ["profound", "flat", "shallow", "empty"], "correctAnswer": ["profound"] }]
+    },
+    {
+      "category": "VOCABULARY", "part": 1, "format": "FILL_IN", "metadata": { "level": "Easy" },
+      "subQuestions": [{ "content": "An apple a day keeps the _______ away.", "correctAnswer": ["doctor"] }]
+    },
+    {
+      "category": "TOEIC", "part": 6, "format": "MULTIPLE_CHOICE", "metadata": { "level": "Medium" },
+      "resource": { "passages": ["Next week, our company will launch a new marketing campaign. We hope it will be as _______ as the last one. The team has worked hard, and we anticipate a positive public response."] },
+      "subQuestions": [{ "content": "Choose the best word for the blank.", "options": ["success", "successful", "succeed", "successfully"], "correctAnswer": ["successful"] }]
+    },
+    {
+      "category": "TOEIC", "part": 5, "format": "MULTIPLE_CHOICE", "metadata": { "level": "Easy" },
+      "subQuestions": [{ "content": "You can find the new office supplies _______ the storage room on the second floor.", "options": ["in", "on", "at", "with"], "correctAnswer": ["in"] }]
+    },
+    {
+      "category": "ACADEMIC", "part": 4, "format": "WRITING", "metadata": { "level": "Hard" },
+      "subQuestions": [{ "content": "Describe a person you admire. You should write at least 100 words.", "correctAnswer": [""] }]
+    },
+    {
+      "category": "TOEIC", "part": 5, "format": "MULTIPLE_CHOICE", "metadata": { "level": "Medium" },
+      "subQuestions": [{ "content": "Due to the storm, the flight was _______ by two hours.", "options": ["delayed", "cancelled", "booked", "boarded"], "correctAnswer": ["delayed"] }]
+    },
+    {
+      "category": "TOEIC", "part": 5, "format": "MULTIPLE_CHOICE", "metadata": { "level": "Easy" },
+      "subQuestions": [{ "content": "She is _______ for preparing the monthly financial reports.", "options": ["responsible", "responsibility", "responsibly", "responsive"], "correctAnswer": ["responsible"] }]
+    },
+    {
+      "category": "TOEIC", "part": 5, "format": "MULTIPLE_CHOICE", "metadata": { "level": "Medium" },
+      "subQuestions": [{ "content": "The manual provides _______ instructions on how to assemble the furniture.", "options": ["detailed", "detail", "detailing", "details"], "correctAnswer": ["detailed"] }]
+    },
+    {
+      "category": "TOEIC", "part": 5, "format": "MULTIPLE_CHOICE", "metadata": { "level": "Easy" },
+      "subQuestions": [{ "content": "The meeting will take place _______ Tuesday morning.", "options": ["on", "at", "in", "by"], "correctAnswer": ["on"] }]
+    },
+    {
+      "category": "TOEIC", "part": 5, "format": "MULTIPLE_CHOICE", "metadata": { "level": "Medium" },
+      "subQuestions": [{ "content": "The project was completed ahead of _______.", "options": ["schedule", "time", "deadline", "plan"], "correctAnswer": ["schedule"] }]
+    },
+    {
+      "category": "TOEIC", "part": 5, "format": "MULTIPLE_CHOICE", "metadata": { "level": "Hard" },
+      "subQuestions": [{ "content": "_______ the new policy, all expense reports must be submitted by Friday.", "options": ["According to", "Because", "Despite", "In addition"], "correctAnswer": ["According to"] }]
+    },
+    {
+      "category": "TOEIC", "part": 5, "format": "MULTIPLE_CHOICE", "metadata": { "level": "Easy" },
+      "subQuestions": [{ "content": "Could you please _______ me the file?", "options": ["send", "sent", "sending", "sends"], "correctAnswer": ["send"] }]
+    },
+    {
+      "category": "TOEIC", "part": 5, "format": "MULTIPLE_CHOICE", "metadata": { "level": "Medium" },
+      "subQuestions": [{ "content": "The manager is not available _______ the moment.", "options": ["at", "on", "in", "for"], "correctAnswer": ["at"] }]
+    },
+    {
+      "category": "TOEIC", "part": 5, "format": "MULTIPLE_CHOICE", "metadata": { "level": "Easy" },
+      "subQuestions": [{ "content": "Our team _______ a new project last month.", "options": ["start", "starts", "started", "starting"], "correctAnswer": ["started"] }]
+    },
+    {
+      "category": "TOEIC", "part": 5, "format": "MULTIPLE_CHOICE", "metadata": { "level": "Medium" },
+      "subQuestions": [{ "content": "Applicants should have at least two years of relevant work _______.", "options": ["experience", "experiment", "expert", "expenditure"], "correctAnswer": ["experience"] }]
+    },
+    {
+      "category": "TOEIC", "part": 5, "format": "MULTIPLE_CHOICE", "metadata": { "level": "Hard" },
+      "subQuestions": [{ "content": "The company will _______ its employees for any work-related travel expenses.", "options": ["reimburse", "remunerate", "return", "refund"], "correctAnswer": ["reimburse"] }]
+    },
+    {
+      "category": "TOEIC", "part": 5, "format": "MULTIPLE_CHOICE", "metadata": { "level": "Easy" },
+      "subQuestions": [{ "content": "The new printer is much _______ than the old one.", "options": ["fast", "faster", "fastest", "fastly"], "correctAnswer": ["faster"] }]
+    },
+    {
+      "category": "TOEIC", "part": 5, "format": "MULTIPLE_CHOICE", "metadata": { "level": "Medium" },
+      "subQuestions": [{ "content": "_______ he was tired, he continued to work.", "options": ["Although", "Because", "So", "If"], "correctAnswer": ["Although"] }]
+    },
+    {
+      "category": "TOEIC", "part": 5, "format": "MULTIPLE_CHOICE", "metadata": { "level": "Easy" },
+      "subQuestions": [{ "content": "I am looking forward _______ from you soon.", "options": ["to hear", "hearing", "to hearing", "heard"], "correctAnswer": ["to hearing"] }]
+    },
+    {
+      "category": "TOEIC", "part": 5, "format": "MULTIPLE_CHOICE", "metadata": { "level": "Medium" },
+      "subQuestions": [{ "content": "The workshop has been _______ until next Friday.", "options": ["postponed", "cancelled", "arranged", "confirmed"], "correctAnswer": ["postponed"] }]
+    },
+    {
+      "category": "TOEIC", "part": 5, "format": "MULTIPLE_CHOICE", "metadata": { "level": "Hard" },
+      "subQuestions": [{ "content": "The board of directors _______ a new CEO last week.", "options": ["appointed", "applied", "appraised", "appeared"], "correctAnswer": ["appointed"] }]
+    },
+    {
+      "category": "TOEIC", "part": 5, "format": "MULTIPLE_CHOICE", "metadata": { "level": "Easy" },
+      "subQuestions": [{ "content": "A copy of the contract is _______ to this email.", "options": ["attached", "connected", "included", "delivered"], "correctAnswer": ["attached"] }]
+    },
+    {
+      "category": "TOEIC", "part": 5, "format": "MULTIPLE_CHOICE", "metadata": { "level": "Medium" },
+      "subQuestions": [{ "content": "All visitors must sign _______ at the reception desk.", "options": ["in", "out", "on", "up"], "correctAnswer": ["in"] }]
+    },
+    {
+      "category": "TOEIC", "part": 5, "format": "MULTIPLE_CHOICE", "metadata": { "level": "Easy" },
+      "subQuestions": [{ "content": "The train _______ at 10:00 AM.", "options": ["departs", "depart", "departing", "departed"], "correctAnswer": ["departs"] }]
+    },
+    {
+      "category": "TOEIC", "part": 5, "format": "MULTIPLE_CHOICE", "metadata": { "level": "Medium" },
+      "subQuestions": [{ "content": "It is _______ to wear a helmet in the construction area.", "options": ["mandatory", "optional", "suggested", "advised"], "correctAnswer": ["mandatory"] }]
+    },
+    {
+      "category": "TOEIC", "part": 5, "format": "MULTIPLE_CHOICE", "metadata": { "level": "Hard" },
+      "subQuestions": [{ "content": "The research findings were not _______; more data is needed.", "options": ["conclusive", "exclusive", "inclusive", "elusive"], "correctAnswer": ["conclusive"] }]
+    },
+    {
+      "category": "TOEIC", "part": 5, "format": "MULTIPLE_CHOICE", "metadata": { "level": "Easy" },
+      "subQuestions": [{ "content": "He _______ to his boss about the issue yesterday.", "options": ["speak", "spoke", "spoken", "speaking"], "correctAnswer": ["spoke"] }]
+    },
+    {
+      "category": "TOEIC", "part": 5, "format": "MULTIPLE_CHOICE", "metadata": { "level": "Medium" },
+      "subQuestions": [{ "content": "The company has a strict _______ regarding punctuality.", "options": ["policy", "procedure", "rule", "guideline"], "correctAnswer": ["policy"] }]
+    },
+    {
+      "category": "TOEIC", "part": 5, "format": "MULTIPLE_CHOICE", "metadata": { "level": "Easy" },
+      "subQuestions": [{ "content": "The office is located on the _______ floor.", "options": ["third", "three", "thrice", "triply"], "correctAnswer": ["third"] }]
+    },
+    {
+      "category": "TOEIC", "part": 5, "format": "MULTIPLE_CHOICE", "metadata": { "level": "Medium" },
+      "subQuestions": [{ "content": "We need to find a _______ to this problem quickly.", "options": ["solution", "result", "answer", "key"], "correctAnswer": ["solution"] }]
+    },
+    {
+      "category": "TOEIC", "part": 5, "format": "MULTIPLE_CHOICE", "metadata": { "level": "Hard" },
+      "subQuestions": [{ "content": "The negotiations were _______, but we finally reached an agreement.", "options": ["arduous", "easy", "simple", "quick"], "correctAnswer": ["arduous"] }]
+    },
+    {
+      "category": "TOEIC", "part": 5, "format": "MULTIPLE_CHOICE", "metadata": { "level": "Easy" },
+      "subQuestions": [{ "content": "She is a very _______ and dedicated employee.", "options": ["reliable", "relying", "relied", "reliability"], "correctAnswer": ["reliable"] }]
+    },
+    {
+      "category": "TOEIC", "part": 5, "format": "MULTIPLE_CHOICE", "metadata": { "level": "Medium" },
+      "subQuestions": [{ "content": "The new system is designed to _______ efficiency.", "options": ["improve", "improved", "improving", "improvement"], "correctAnswer": ["improve"] }]
+    },
+    {
+      "category": "TOEIC", "part": 5, "format": "MULTIPLE_CHOICE", "metadata": { "level": "Easy" },
+      "subQuestions": [{ "content": "He _______ his email every morning.", "options": ["checks", "check", "checking", "checked"], "correctAnswer": ["checks"] }]
+    },
+    {
+      "category": "TOEIC", "part": 5, "format": "MULTIPLE_CHOICE", "metadata": { "level": "Medium" },
+      "subQuestions": [{ "content": "The information in this report is highly _______.", "options": ["confidential", "confident", "confidence", "confiding"], "correctAnswer": ["confidential"] }]
+    },
+    {
+      "category": "TOEIC", "part": 5, "format": "MULTIPLE_CHOICE", "metadata": { "level": "Hard" },
+      "subQuestions": [{ "content": "We must _______ with all safety regulations.", "options": ["comply", "complete", "compete", "complain"], "correctAnswer": ["comply"] }]
+    },
+    {
+      "category": "TOEIC", "part": 5, "format": "MULTIPLE_CHOICE", "metadata": { "level": "Easy" },
+      "subQuestions": [{ "content": "Did you _______ the new memo?", "options": ["receive", "received", "receiving", "receives"], "correctAnswer": ["receive"] }]
+    },
+    {
+      "category": "TOEIC", "part": 5, "format": "MULTIPLE_CHOICE", "metadata": { "level": "Medium" },
+      "subQuestions": [{ "content": "The changes will be _______ on the first of next month.", "options": ["implemented", "implicated", "imparted", "impacted"], "correctAnswer": ["implemented"] }]
+    },
+    {
+      "category": "TEST_INVALID", "part": 1, "format": "MULTIPLE_CHOICE", "metadata": { "level": "Easy" },
+      "subQuestions": [{ "content": "This is a test question with an invalid answer. The verb 'enjoy' is followed by a _______.", "options": ["gerund", "infinitive", "noun"], "correctAnswer": ["gerund"], "explanation": "Validation should fail because 'gerund-typo' is not in the options." }]
+    },
+    {
+      "category": "TEST_INVALID", "part": 2, "format": "FILL_IN", "metadata": { "level": "Easy" },
+      "subQuestions": [{ "content": "This question is invalid because it is missing the metadata field.", "correctAnswer": ["ok"] }]
+    },
+    {
+      "category": "TOEIC", "part": 5, "format": "MULTIPLE_CHOICE", "metadata": { "level": "Easy" },
+      "subQuestions": [{ "content": "She works _______ than her colleagues.", "options": ["hard", "harder", "hardest", "hardly"], "correctAnswer": ["harder"] }]
+    },
+    {
+      "category": "TOEIC", "part": 5, "format": "MULTIPLE_CHOICE", "metadata": { "level": "Medium" },
+      "subQuestions": [{ "content": "The success of the project depends _______ on teamwork.", "options": ["heavily", "heavy", "heaviness", "heavier"], "correctAnswer": ["heavily"] }]
+    },
+    {
+      "category": "TOEIC", "part": 5, "format": "MULTIPLE_CHOICE", "metadata": { "level": "Hard" },
+      "subQuestions": [{ "content": "The company's _______ have increased by 10% this quarter.", "options": ["earnings", "earns", "earned", "earning"], "correctAnswer": ["earnings"] }]
+    }
+  ]
+}

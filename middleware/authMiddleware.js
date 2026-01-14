@@ -10,6 +10,11 @@ const protect = async (req, res, next) => {
       // Lấy token từ header (loại bỏ chữ 'Bearer')
       token = req.headers.authorization.split(' ')[1];
 
+      // Kiểm tra xem token có tồn tại sau khi tách chuỗi không
+      if (!token || token === 'undefined') {
+        return res.status(401).json({ message: 'Xác thực thất bại, token không được cung cấp.' });
+      }
+
       // Xác thực token
       const decoded = jwt.verify(token, process.env.JWT_SECRET);
 
@@ -21,39 +26,27 @@ const protect = async (req, res, next) => {
         return res.status(401).json({ message: 'Người dùng không tồn tại.' });
       }
 
-      next(); // Chuyển sang middleware hoặc controller tiếp theo
+      next();
     } catch (error) {
-      console.error(error);
-      res.status(401).json({ message: 'Token không hợp lệ, không có quyền truy cập' });
+      // Bắt các lỗi từ jwt.verify (token sai định dạng, hết hạn, etc.)
+      console.error('Lỗi xác thực Token:', error.message);
+      return res.status(401).json({ message: 'Xác thực thất bại, token không hợp lệ.' });
     }
-  }
-
-  if (!token) {
-    res.status(401).json({ message: 'Không tìm thấy token, không có quyền truy cập' });
+  } else {
+    // Nếu không có header 'Authorization' hoặc không bắt đầu bằng 'Bearer'
+    return res.status(401).json({ message: 'Xác thực thất bại, không tìm thấy token.' });
   }
 };
 
-// Middleware phân quyền dựa trên vai trò (role)
+// Middleware kiểm tra quyền hạn (ví dụ: 'ADMIN')
 const authorize = (...roles) => {
   return (req, res, next) => {
-    // Middleware này phải chạy SAU middleware 'protect', nên req.user đã có sẵn
     if (!req.user || !roles.includes(req.user.role)) {
-      return res.status(403).json({
-        message: `Vai trò của bạn (${req.user.role}) không có quyền truy cập tài nguyên này.`
-      });
+      // Sửa lỗi: Trả về mã lỗi 403 Forbidden thay vì 401
+      return res.status(403).json({ message: `Người dùng với vai trò '${req.user.role}' không có quyền truy cập vào tài nguyên này.` });
     }
     next();
   };
 };
 
-// Middleware kiểm tra quyền Premium
-const checkPremium = (req, res, next) => {
-    // Middleware này cũng phải chạy SAU middleware 'protect'
-    if (req.user && req.user.subscription.plan === 'PREMIUM') {
-        next();
-    } else {
-        res.status(403).json({ message: 'Tính năng này yêu cầu tài khoản PREMIUM.' });
-    }
-};
-
-export { protect, authorize, checkPremium };
+export { protect, authorize };

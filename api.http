@@ -1,0 +1,108 @@
+### 1. Đăng ký người dùng mới (chỉ cần chạy một lần)
+POST http://localhost:5000/api/auth/register
+Content-Type: application/json
+
+{
+  "name": "Test User",
+  "email": "test@example.com",
+  "password": "password123"
+}
+
+### Tách biệt giữa các request
+###----------------------------------
+
+### 2. Đăng nhập để lấy Token (Luôn chạy đầu tiên!)
+# Đặt tên cho request này là "login" để các request khác có thể tham chiếu.
+### @name login
+POST http://localhost:5000/api/auth/login
+Content-Type: application/json
+
+{
+  "email": "test@example.com",
+  "password": "password123"
+}
+
+{{#
+  // Script này sẽ tự động lưu token vào một biến có tên là "token"
+  client.global.set("token", response.body.token);
+}}
+
+### Tách biệt giữa các request
+###----------------------------------
+
+### 3. Lấy tất cả câu hỏi (Để lấy ID cho bài thi)
+# Dùng kết quả từ request này để copy các ID câu hỏi
+GET http://localhost:5000/api/questions
+Authorization: Bearer {{token}}
+
+
+### Tách biệt giữa các request
+###----------------------------------
+
+### 4. Tạo bài thi mới (Yêu cầu xác thực)
+# LƯU Ý: Hãy copy & paste các ID câu hỏi bạn muốn từ request #3 vào mảng "questionList" bên dưới.
+@name createExam
+POST http://localhost:5000/api/exams/create
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+{
+  "title": "TOEIC Mini Test - Part 5",
+  "type": "TOEIC",
+  "duration": 15,
+  "sections": [
+    {
+      "sectionName": "Part 5: Incomplete Sentences",
+      "description": "Chọn từ hoặc cụm từ đúng nhất để hoàn thành câu.",
+      "questionList": [
+        "667bb4786d55737b8332194b",
+        "667bb4786d55737b8332194c",
+        "667bb4786d55737b8332194d"
+      ]
+    }
+  ],
+  "metadata": {
+    "difficulty": "Medium",
+    "isPublished": false
+  }
+}
+
+{{#
+  // Script này sẽ tự động lưu ID bài thi vừa tạo vào biến "examId"
+  client.global.set("examId", response.body._id);
+}}
+
+### Tách biệt giữa các request
+###----------------------------------
+
+### 5. Lấy thông tin chi tiết một bài thi
+# Request này sẽ tự động sử dụng ID của bài thi vừa được tạo ở request #4.
+# Hoặc bạn có thể thay thế {{examId}} bằng một ID bài thi cụ thể.
+GET http://localhost:5000/api/exams/{{examId}}
+Content-Type: application/json
+
+
+### Tách biệt giữa các request
+###----------------------------------
+
+### 6. Import câu hỏi (Yêu cầu xác thực)
+POST http://localhost:5000/api/questions/import
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+# Dán nội dung file JSON của bạn vào đây
+{
+  "questions": [
+    {
+      "category": "TOEIC", "part": 5, "format": "MULTIPLE_CHOICE", "metadata": { "level": "Easy" },
+      "subQuestions": [{ "content": "Mr. Kim is a _______ respected member of the community.", "options": ["high", "highly", "higher", "height"], "correctAnswer": ["highly"], "explanation": "Trạng từ 'highly' bổ nghĩa cho động từ 'respected'." }]
+    }
+  ]
+}
+
+### Tách biệt giữa các request
+###----------------------------------
+
+### 7. Đăng xuất (Yêu cầu xác thực)
+POST http://localhost:5000/api/auth/logout
+Authorization: Bearer {{token}}

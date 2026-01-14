@@ -1,10 +1,15 @@
 import express from 'express';
-import { bulkImportQuestions } from '../controllers/questionController.js';
-import { protect, admin } from '../middleware/authMiddleware.js';
+import { getAllQuestions, bulkImportQuestions } from '../controllers/questionController.js';
+import { protect, authorize } from '../middleware/authMiddleware.js';
 
 const router = express.Router();
 
-// POST /api/questions/import
-router.route('/import').post(protect, admin, bulkImportQuestions);
+router
+  .route('/')
+  .get(protect, authorize('ADMIN'), getAllQuestions);
+
+router
+  .route('/import')
+  .post(protect, authorize('ADMIN'), bulkImportQuestions);
 
 export default router;
