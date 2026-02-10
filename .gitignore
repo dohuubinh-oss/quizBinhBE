@@ -1,10 +1,18 @@
-# Môi trường
+# Dependencies
+/node_modules
+
+# Production
+/build
+/dist
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment variables
 .env
-
-# Phụ thuộc
-node_modules/
-
-# Log
-npm-debug.log
-yarn-debug.log
-yarn-error.log
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local

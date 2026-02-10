@@ -15,7 +15,13 @@ const UserSchema = new mongoose.Schema({
   },
   password: { 
     type: String, 
-    required: true 
+    required: false // Không bắt buộc đối với đăng nhập bằng MXH
+  },
+  googleId: {
+    type: String
+  },
+  facebookId: {
+    type: String
   },
   avatar: { 
     type: String, 

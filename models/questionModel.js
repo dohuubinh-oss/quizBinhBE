@@ -4,6 +4,7 @@ const QuestionSchema = new mongoose.Schema({
   // 1. Phân loại chung
   category: { type: String, enum: ['TOEIC', 'ACADEMIC', 'PLACEMENT'], required: true },
   part: { type: Number, required: true }, // TOEIC (1-7), Academic (tương ứng Ex 1-12)
+  topic: { type: String, enum: ['Vocabulary', 'Grammar', 'Reading', 'Listening'], required: true },
   
   // 2. Định dạng câu hỏi (Quyết định cách hiển thị UI)
   format: { 
@@ -32,7 +33,7 @@ const QuestionSchema = new mongoose.Schema({
 
   // 5. Thông tin quản lý
   metadata: {
-    level: { type: String, enum: ['Easy', 'Medium', 'Hard'] },
+    level: { type: String, enum: ['Beginner', 'Easy', 'Medium', 'Hard', 'Advanced'], required: true },
     examId: { type: mongoose.Schema.Types.ObjectId, ref: 'Exam' } // Tham chiếu đến một model Exam trong tương lai
   }
 }, { timestamps: true });

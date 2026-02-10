@@ -2,11 +2,8 @@ import User from '../models/userModel.js';
 import UserAnalytics from '../models/userAnalyticsModel.js';
 import jwt from 'jsonwebtoken';
 import bcrypt from 'bcryptjs';
-import dotenv from 'dotenv';
 import catchAsync from '../utils/catchAsync.js';
 import AppError from '../utils/appError.js';
-
-dotenv.config();
 
 const generateToken = (user) => {
   return jwt.sign(
@@ -88,4 +85,16 @@ const logoutUser = (req, res) => {
   res.status(200).json({ message: 'Đăng xuất thành công' });
 };
 
-export { registerUser, loginUser, logoutUser };
+// Xử lý callback sau khi đăng nhập qua MXH thành công
+const socialLoginCallback = (req, res) => {
+  // Passport đã xác thực và gắn user vào req.user
+  const token = generateToken(req.user);
+
+  // Chuyển hướng người dùng về trang frontend với token
+  // Ví dụ: http://your-frontend.com/auth/callback?token=...
+  const clientUrl = process.env.CLIENT_URL || 'http://localhost:3000'; 
+
+  res.redirect(`${clientUrl}/auth/social-callback?token=${token}`);
+};
+
+export { registerUser, loginUser, logoutUser, socialLoginCallback };
