@@ -1,5 +1,6 @@
+import './config/env.js'; // Must be the very first import
+
 import express from 'express';
-import dotenv from 'dotenv';
 import cors from 'cors';
 import helmet from 'helmet';
 import cookieParser from 'cookie-parser';
@@ -18,9 +19,6 @@ import userRoutes from './routes/userRoutes.js';
 import questionRoutes from './routes/questionRoutes.js';
 import examRoutes from './routes/examRoutes.js';
 import blogRoutes from './routes/blogRoutes.js';
-
-// Load env vars
-dotenv.config();
 
 // Connect to database
 connectDB();
@@ -69,7 +67,6 @@ app.post('/api/generate', async (req, res, next) => {
       return next(new AppError('Prompt is required', 400));
     }
 
-    // Using gemini-pro as the most basic test case
     const model = genAI.getGenerativeModel({ model: "gemini-3-flash-preview" });
     const result = await model.generateContent(prompt);
     const response = await result.response;
@@ -77,16 +74,16 @@ app.post('/api/generate', async (req, res, next) => {
 
     res.status(200).json({ generatedText: text });
   } catch (error) {
-    // Log the original error for debugging
+    
     console.error('Error calling Gemini API:', error);
-    // Forward to the global error handler
+    
     next(new AppError('Failed to generate content from API', 500));
   }
 });
 
 // Handle unhandled routes
 app.all('*', (req, res, next) => {
-  next(new AppError(`Can't find ${req.originalUrl} on this server!`, 404));
+  next(new AppError(`Can\'t find ${req.originalUrl} on this server!`, 404));
 });
 
 // Global Error Handling Middleware

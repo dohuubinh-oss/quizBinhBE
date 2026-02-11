@@ -25,13 +25,4 @@ router.get(
   socialLoginCallback // Xử lý sau khi thành công
 );
 
-// --- Facebook Auth ---
-router.get('/facebook', passport.authenticate('facebook', { scope: ['email'] }));
-
-router.get(
-  '/facebook/callback',
-  passport.authenticate('facebook', { failureRedirect: '/login' }),
-  socialLoginCallback
-);
-
 export default router;

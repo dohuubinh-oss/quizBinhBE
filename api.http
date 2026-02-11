@@ -35,7 +35,7 @@ Authorization: Bearer {{token}}
 
 ### 4. Tạo bài thi mới (Sử dụng cú pháp gán biến chuẩn)
 # @name createExam
-POST http://localhost:5000/api/exams/create
+POST http://localhost:5000/api/exams
 Content-Type: application/json
 Authorization: Bearer {{token}}
 
@@ -62,7 +62,7 @@ Authorization: Bearer {{token}}
 
 ###
 # Gán ID bài thi từ response của request 'createExam' vào biến @examId
-@examId = {{createExam.response.body._id}}
+@examId = {{createExam.response.body.data.exam._id}}
 
 ###
 
@@ -95,10 +95,44 @@ Authorization: Bearer {{token}}
 
 ###
 
-### 8. Kiểm tra Gemini API
+### 8. Kiểm tra Gemini API (Route chung)
 POST http://localhost:5000/api/generate
 Content-Type: application/json
 
 {
-  "prompt": "viết 1 câu chuyện hài về đòi sống vợ chồng mới nhất"
+  "prompt": "viết 1 câu chuyện hài về đời sống vợ chồng mới nhất"
 }
+
+###
+
+### 9. Tạo câu hỏi bằng AI (Tính năng mới)
+# @name generateQuestion
+POST http://localhost:5000/api/questions/generate
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+{
+  "topic": "Vocabulary",
+  "level": "Medium",
+  "part": 5,
+  "category": "TOEIC",
+  "format": "MULTIPLE_CHOICE"
+}
+
+###
+
+### 10. Chấm điểm bài thi (Tính năng mới)
+# @name gradeExam
+POST http://localhost:5000/api/exams/{{examId}}/grade
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+{
+  "answers": {
+    "667bb4786d55737b8332194b": "highly",
+    "667bb4786d55737b8332194c": "some answer",
+    "667bb4786d55737b8332194d": "another answer"
+  }
+}
+
+###

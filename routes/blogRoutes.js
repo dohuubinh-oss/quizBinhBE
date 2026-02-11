@@ -6,14 +6,14 @@ import {
   updateBlog,
   deleteBlog
 } from '../controllers/blogController.js';
-import { protect } from '../middleware/authMiddleware.js';
+import { protect, authorize } from '../middleware/authMiddleware.js';
 
 const router = express.Router();
 
 router
   .route('/')
   .get(getAllBlogs)
-  .post(protect, createBlog); // Assuming 'protect' is your authentication middleware
+  .post(protect, authorize('ADMIN', 'TEACHER'), createBlog);
 
 router
   .route('/:slug')
@@ -21,7 +21,7 @@ router
 
 router
   .route('/:id')
-  .patch(protect, updateBlog)
-  .delete(protect, deleteBlog);
+  .patch(protect, authorize('ADMIN', 'TEACHER'), updateBlog)
+  .delete(protect, authorize('ADMIN', 'TEACHER'), deleteBlog);
 
 export default router;
